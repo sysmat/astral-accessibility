@@ -2,9 +2,8 @@ import { DOCUMENT, NgIf, NgClass } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 @Component({
-  selector: "astral-invert",
-  standalone: true,
-  template: `
+    selector: "astral-invert",
+    template: `
     <button
       (click)="inverted ? removeInvertCss() : invertPage()"
       [ngClass]="{ 'in-use': inverted }"
@@ -24,7 +23,7 @@ import { Component, inject } from "@angular/core";
       ></i>
     </button>
   `,
-  imports: [NgIf, NgClass],
+    imports: [NgIf, NgClass]
 })
 export class InvertComponent {
   document = inject(DOCUMENT);

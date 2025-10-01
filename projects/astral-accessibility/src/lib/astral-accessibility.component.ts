@@ -10,22 +10,21 @@ import { ScreenMaskComponent } from "./controls/screen-mask.component";
 import { LineHeightComponent } from "./controls/line-height.component";
 
 @Component({
-  selector: "astral-accessibility",
-  templateUrl: "./astral-accessibility.component.html",
-  styleUrls: ["./astral-accessibility.component.scss"],
-  standalone: true,
-  imports: [
-    NgIf,
-    InvertComponent,
-    ContrastComponent,
-    SaturateComponent,
-    TextSizeComponent,
-    TextSpacingComponent,
-    ScreenReaderComponent,
-    ScreenMaskComponent,
-    LineHeightComponent,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: "astral-accessibility",
+    templateUrl: "./astral-accessibility.component.html",
+    styleUrls: ["./astral-accessibility.component.scss"],
+    imports: [
+        NgIf,
+        InvertComponent,
+        ContrastComponent,
+        SaturateComponent,
+        TextSizeComponent,
+        TextSpacingComponent,
+        ScreenReaderComponent,
+        ScreenMaskComponent,
+        LineHeightComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AstralAccessibilityComponent {
   modalVisible = false;

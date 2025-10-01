@@ -3,9 +3,8 @@ import { Component, inject, Renderer2 } from "@angular/core";
 import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
 
 @Component({
-  selector: "astral-screen-reader",
-  standalone: true,
-  template: `
+    selector: "astral-screen-reader",
+    template: `
     <button
       [disabled]="!synthesisAvailable"
       (click)="nextState()"
@@ -84,7 +83,7 @@ import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
       ></astral-widget-checkmark>
     </button>
   `,
-  imports: [NgIf, NgClass, AstralCheckmarkSvgComponent],
+    imports: [NgIf, NgClass, AstralCheckmarkSvgComponent]
 })
 export class ScreenReaderComponent {
   globalListenFunction: Function;

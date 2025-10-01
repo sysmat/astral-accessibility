@@ -3,9 +3,8 @@ import { Component, Renderer2, inject } from "@angular/core";
 import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
 
 @Component({
-  selector: "astral-line-height",
-  standalone: true,
-  template: `
+    selector: "astral-line-height",
+    template: `
     <button
       (click)="nextState()"
       [ngClass]="{ 'in-use': states[currentState] != base }"
@@ -66,7 +65,7 @@ import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
       ></astral-widget-checkmark>
     </button>
   `,
-  imports: [NgIf, NgClass, AstralCheckmarkSvgComponent],
+    imports: [NgIf, NgClass, AstralCheckmarkSvgComponent]
 })
 export class LineHeightComponent {
   constructor(private renderer: Renderer2) {}
