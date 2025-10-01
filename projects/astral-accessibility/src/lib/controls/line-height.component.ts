@@ -1,5 +1,5 @@
-import { DOCUMENT, NgIf, NgClass } from "@angular/common";
-import { Component, Renderer2, inject } from "@angular/core";
+import { NgClass } from "@angular/common";
+import { Component, Renderer2, inject, DOCUMENT } from "@angular/core";
 import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
 
 @Component({
@@ -65,7 +65,7 @@ import { AstralCheckmarkSvgComponent } from "../util/astral-checksvg.component";
       ></astral-widget-checkmark>
     </button>
   `,
-    imports: [NgIf, NgClass, AstralCheckmarkSvgComponent]
+    imports: [NgClass, AstralCheckmarkSvgComponent]
 })
 export class LineHeightComponent {
   constructor(private renderer: Renderer2) {}

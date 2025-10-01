@@ -1,4 +1,4 @@
-import { NgIf } from "@angular/common";
+
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { ContrastComponent } from "./controls/contrast.component";
 import { InvertComponent } from "./controls/invert.component";
@@ -14,16 +14,15 @@ import { LineHeightComponent } from "./controls/line-height.component";
     templateUrl: "./astral-accessibility.component.html",
     styleUrls: ["./astral-accessibility.component.scss"],
     imports: [
-        NgIf,
-        InvertComponent,
-        ContrastComponent,
-        SaturateComponent,
-        TextSizeComponent,
-        TextSpacingComponent,
-        ScreenReaderComponent,
-        ScreenMaskComponent,
-        LineHeightComponent,
-    ],
+    InvertComponent,
+    ContrastComponent,
+    SaturateComponent,
+    TextSizeComponent,
+    TextSpacingComponent,
+    ScreenReaderComponent,
+    ScreenMaskComponent,
+    LineHeightComponent
+],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AstralAccessibilityComponent {

@@ -1,5 +1,5 @@
-import { DOCUMENT, NgIf, NgClass } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { NgClass } from "@angular/common";
+import { Component, inject, DOCUMENT } from "@angular/core";
 
 @Component({
     selector: "astral-invert",
@@ -7,7 +7,7 @@ import { Component, inject } from "@angular/core";
     <button
       (click)="inverted ? removeInvertCss() : invertPage()"
       [ngClass]="{ 'in-use': inverted }"
-    >
+      >
       <!-- <img engage-asset src="../../assets/images/accessibility.png"/> -->
       <div class="d-flex align-items-center">
         <i
@@ -16,14 +16,15 @@ import { Component, inject } from "@angular/core";
         ></i>
         <span>Invert Colours</span>
       </div>
-      <i
-        *ngIf="inverted"
-        class="pi pi-check icon active active-check"
-        style="font-weight: 900"
-      ></i>
+      @if (inverted) {
+        <i
+          class="pi pi-check icon active active-check"
+          style="font-weight: 900"
+        ></i>
+      }
     </button>
-  `,
-    imports: [NgIf, NgClass]
+    `,
+    imports: [NgClass]
 })
 export class InvertComponent {
   document = inject(DOCUMENT);

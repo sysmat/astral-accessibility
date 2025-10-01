@@ -1,4 +1,4 @@
-import { DOCUMENT } from "@angular/common";
+
 import { createCustomElement } from "@angular/elements";
 import { createApplication } from "@angular/platform-browser";
 import { AstralAccessibilityComponent } from "./lib/astral-accessibility.component";
