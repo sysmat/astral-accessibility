@@ -1,11 +1,11 @@
-
 import { createCustomElement } from "@angular/elements";
 import { createApplication } from "@angular/platform-browser";
 import { AstralAccessibilityComponent } from "./lib/astral-accessibility.component";
 import "zone.js";
+import { DOCUMENT } from "@angular/core";
 
 (window as any).initializeAstral = async function initializeAstral(
-  features?: Record<string, any>,
+  features?: Record<string, any>
 ) {
   try {
     //When no options are given by default all widgets are allowed
@@ -31,11 +31,11 @@ import "zone.js";
 
     const doc = app.injector.get(DOCUMENT);
     const astralAccessibilityElement = doc.createElement(
-      "astral-accessibility",
+      "astral-accessibility"
     );
     astralAccessibilityElement.setAttribute(
       "astral-features",
-      JSON.stringify(features),
+      JSON.stringify(features)
     );
     doc.body.appendChild(astralAccessibilityElement);
   } catch (err) {

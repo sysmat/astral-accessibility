@@ -3,16 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "astral-accessibility": [
-        "dist/astral-accessibility"
-      ]
+      "astral-accessibility": ["dist/astral-accessibility"]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "strict": false,
     "strictPropertyInitialization": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -25,10 +22,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {

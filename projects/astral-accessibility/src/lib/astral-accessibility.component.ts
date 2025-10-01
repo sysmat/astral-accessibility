@@ -1,7 +1,5 @@
-
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { ContrastComponent } from "./controls/contrast.component";
-import { InvertComponent } from "./controls/invert.component";
 import { SaturateComponent } from "./controls/saturate.component";
 import { TextSizeComponent } from "./controls/text-size.component";
 import { TextSpacingComponent } from "./controls/text-spacing.component";
@@ -10,20 +8,19 @@ import { ScreenMaskComponent } from "./controls/screen-mask.component";
 import { LineHeightComponent } from "./controls/line-height.component";
 
 @Component({
-    selector: "astral-accessibility",
-    templateUrl: "./astral-accessibility.component.html",
-    styleUrls: ["./astral-accessibility.component.scss"],
-    imports: [
-    InvertComponent,
+  selector: "astral-accessibility",
+  templateUrl: "./astral-accessibility.component.html",
+  styleUrls: ["./astral-accessibility.component.scss"],
+  imports: [
     ContrastComponent,
     SaturateComponent,
     TextSizeComponent,
     TextSpacingComponent,
     ScreenReaderComponent,
     ScreenMaskComponent,
-    LineHeightComponent
-],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    LineHeightComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AstralAccessibilityComponent {
   modalVisible = false;
