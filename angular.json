@@ -51,11 +51,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "astral-accessibility:build"
+            "buildTarget": "astral-accessibility:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "astral-accessibility:build:production"
+              "buildTarget": "astral-accessibility:build:production"
             }
           }
         },
